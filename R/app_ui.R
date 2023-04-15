@@ -5,6 +5,8 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @import shinydashboard
+#' @import shinydashboardPlus
 #' @noRd
 app_ui <- function(request) {
   tagList(
@@ -14,21 +16,26 @@ app_ui <- function(request) {
     # Your application UI logic
     # fluidPage(
       shinydashboardPlus::dashboardPage(
+        # skin = "midnight",
         header=shinydashboardPlus::dashboardHeader(
-          title = "Ransera Seasonal Wage Calculator"
+          title = "Wage Calculator"
           # enable_rightsidebar=FALSE
         ), #dashboardHeaderPlus
 
         #Navigation Menu
         sidebar = shinydashboard::dashboardSidebar(
+
           ##The Menus - The tabName is what is used to display the correct information
-          # id = "tabs", #"tabs" shows up on dashboard for somereason
+          shinydashboard::sidebarMenu(
+            id = "tabs",
 
-          ###Profession Wage Calculator Page
-          shinydashboard::menuItem("Profession Wage Calcuator", tabName="pwage",icon = icon("dashboard")),
+            ###Profession Wage Calculator Page
+            shinydashboard::menuItem("Profession Wage Calcuator", tabName="pwage",icon = icon("user-tie")),
 
-          ###Business Wage Calculator Page
-          shinydashboard::menuItem("Business Wage Calculator", tabName="bwage",icon = icon("dashboard"))
+            ###Business Wage Calculator Page
+            shinydashboard::menuItem("Business Wage Calculator", tabName="bwage",icon = icon("building"))
+          )
+
 
         ), #dashboardSidebar
 
@@ -44,7 +51,12 @@ app_ui <- function(request) {
             ###Business Wage Calculator Page
             shinydashboard::tabItem("bwage",h3("Business Wage Calculator Page"))
           ) #tabItems
-        ) #dashboardBody
+        ), #dashboardBody
+
+        controlbar = shinydashboardPlus::dashboardControlbar(
+          collapsed = TRUE,
+          shinydashboardPlus::skinSelector()
+        )
 
 
 
