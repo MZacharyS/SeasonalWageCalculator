@@ -10,11 +10,50 @@ app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
+
     # Your application UI logic
-    fluidPage(
-      h1("SeasonalWageCalculator")
-    )
-  )
+    # fluidPage(
+      shinydashboardPlus::dashboardPage(
+        header=shinydashboardPlus::dashboardHeader(
+          title = "Ransera Seasonal Wage Calculator"
+          # enable_rightsidebar=FALSE
+        ), #dashboardHeaderPlus
+
+        #Navigation Menu
+        sidebar = shinydashboard::dashboardSidebar(
+          ##The Menus - The tabName is what is used to display the correct information
+          # id = "tabs", #"tabs" shows up on dashboard for somereason
+
+          ###Profession Wage Calculator Page
+          shinydashboard::menuItem("Profession Wage Calcuator", tabName="pwage",icon = icon("dashboard")),
+
+          ###Business Wage Calculator Page
+          shinydashboard::menuItem("Business Wage Calculator", tabName="bwage",icon = icon("dashboard"))
+
+        ), #dashboardSidebar
+
+        #Body of tabs that shows the calculators/information
+        body = shinydashboard::dashboardBody(
+
+          ##The tabs created in the Navigation Menu get called/filled out here
+          shinydashboard::tabItems(
+
+            ###Professional Wage Calculator Page
+            shinydashboard::tabItem("pwage",h3("Professional Wage Calculator Page")),
+
+            ###Business Wage Calculator Page
+            shinydashboard::tabItem("bwage",h3("Business Wage Calculator Page"))
+          ) #tabItems
+        ) #dashboardBody
+
+
+
+
+
+
+      ) #dashboardPagePlus - Keep tags within this parenthesis
+    # ) #Fluid Page
+  ) #tagList
 }
 
 #' Add external Resources to the Application

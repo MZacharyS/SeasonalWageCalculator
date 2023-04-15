@@ -11,10 +11,13 @@ Imports:
     golem (>= 0.4.0),
     openxlsx,
     readxl,
-    shiny (>= 1.7.4)
+    shiny (>= 1.7.4),
+    shinydashboard,
+    shinydashboardPlus,
+    shinythemes
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Suggests: 
     spelling,
     testthat (>= 3.0.0)

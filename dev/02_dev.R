@@ -18,6 +18,9 @@ usethis::use_package("dplyr")
 usethis::use_package("ggplot2")
 usethis::use_package("openxlsx")
 usethis::use_package("readxl")
+usethis::use_package("shinydashboardPlus")
+usethis::use_package("shinydashboard")
+usethis::use_package("shinythemes")
 
 ## Amend DESCRIPTION with dependencies read from package code parsing
 ## install.packages('attachment') # if needed.
