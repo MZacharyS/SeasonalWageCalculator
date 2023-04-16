@@ -46,10 +46,10 @@ app_ui <- function(request) {
           shinydashboard::tabItems(
 
             ###Professional Wage Calculator Page
-            shinydashboard::tabItem("pwage",h3("Professional Wage Calculator Page")),
+            shinydashboard::tabItem("pwage",mod_PWageCal_ui("PWageCal_1")),
 
             ###Business Wage Calculator Page
-            shinydashboard::tabItem("bwage",h3("Business Wage Calculator Page"))
+            shinydashboard::tabItem("bwage",mod_BWageCal_ui("BWageCal_1"))
           ) #tabItems
         ), #dashboardBody
 
