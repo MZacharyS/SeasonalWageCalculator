@@ -18,8 +18,19 @@ app_ui <- function(request) {
       shinydashboardPlus::dashboardPage(
         # skin = "midnight",
         header=shinydashboardPlus::dashboardHeader(
-          title = "Wage Calculator"
-          # enable_rightsidebar=FALSE
+          title = "Wage Calculator",
+          shinydashboard::dropdownMenu(
+            type = "tasks",
+            icon = icon("question-circle"),
+            badgeStatus = NULL,
+            headerText = "Legends of Ransera Links",
+            shinydashboardPlus::notificationItem(
+              "Legends of Ransera Home",
+              icon = icon("wand-magic-sparkles"),
+              href="https://legendofransera.com/"
+            )
+          )
+
         ), #dashboardHeaderPlus
 
         #Navigation Menu
