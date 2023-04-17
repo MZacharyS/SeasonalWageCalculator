@@ -22,6 +22,8 @@ usethis::use_package("shinydashboardPlus")
 usethis::use_package("shinydashboard")
 usethis::use_package("shinythemes")
 usethis::use_package("stringr")
+usethis::use_package("DT")
+usethis::use_package("tibble")
 
 ## Amend DESCRIPTION with dependencies read from package code parsing
 ## install.packages('attachment') # if needed.

@@ -177,7 +177,7 @@ mod_PWageCal_server <- function(id){
           "\n[*] [b]Location of Employment:[/b]",employer,
           "\n[*] [b]Job Thread 1:[/b]",input$jt1,
           "\n[*] [b]Job Thread 2:[/b]",input$jt2,
-          "\n[code]
+          "\n[/list][/code]
 \n[/style2][/style]"
 
         )
