@@ -11,7 +11,7 @@
 mod_PWageCal_ui <- function(id){
   ns <- NS(id)
   tagList(
-    h3("Professional Wage Calculator Page"),
+    h3("Professional Wage Calculator Page (Updated 02/24/2024)"),
     shinydashboard::tabBox(
       tags$head(
         tags$style(HTML(" #tabBox {width:90vh,height:100vh !important;}")) #HTML/CSS to help set width of tabBox contents
